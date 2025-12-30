@@ -1,0 +1,111 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.search-bar-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 100%;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
+
+.current-weather {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.forecast {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.forecast-item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+}
